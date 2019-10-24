@@ -1,14 +1,19 @@
 package ru.skillbranch.devintensive.utils
 
-import android.service.voice.AlwaysOnHotwordDetector
-
 object Utils {
     fun parseFullName(fullName: String?) : Pair<String?, String?> {
-        //TODO FIX ME!!!
         val parts: List<String>? = fullName?.split(" ")
 
-        val firstName = parts?.getOrNull(0)
-        val lastName = parts?.getOrNull(1)
+        var firstName: String? = null
+        var lastName: String? = null
+        if (!fullName?.isBlank()!!) {
+            if(parts?.size == 1) {
+                firstName = parts.getOrNull(0)
+            } else {
+                firstName = parts?.getOrNull(0)
+                lastName = parts?.getOrNull(1)
+            }
+        }
         return firstName to lastName
     }
 

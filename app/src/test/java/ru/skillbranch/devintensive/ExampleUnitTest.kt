@@ -89,4 +89,10 @@ class ExampleUnitTest {
     fun test_humanizeDiff() {
         println(Date().add(7, TimeUnits.DAY).humanizeDiff())
     }
+
+    @Test
+    fun test_parseFullName() {
+        var user1 = User.makeUser(" ")
+        print(user1)
+    }
 }
