@@ -5,6 +5,7 @@ import org.junit.Test
 import org.junit.Assert.*
 import ru.skillbranch.devintensive.extensions.*
 import ru.skillbranch.devintensive.models.*
+import ru.skillbranch.devintensive.utils.Utils
 import java.util.*
 
 /**
@@ -94,5 +95,10 @@ class ExampleUnitTest {
     fun test_parseFullName() {
         var user1 = User.makeUser(" ")
         print(user1)
+    }
+
+    @Test
+    fun test_toInitials() {
+        print(Date().humanizeDiff(Date().add(7, TimeUnits.DAY)))
     }
 }

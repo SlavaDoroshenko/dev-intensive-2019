@@ -1,6 +1,5 @@
 package ru.skillbranch.devintensive.extensions
 
-import java.lang.IllegalStateException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -28,7 +27,7 @@ fun Date.add(value: Int, units: TimeUnits = TimeUnits.SECOND) : Date {
 }
 
 fun Date.humanizeDiff(date: Date = Date()): String {
-    return when(date) {
+     return when(date) {
         Date().add(-2, TimeUnits.HOUR) -> "2 часа назад"
         Date().add(-5, TimeUnits.DAY) -> "5 дней назад"
         Date().add(2, TimeUnits.MINUTE) -> "через 2 минуты"
