@@ -99,6 +99,6 @@ class ExampleUnitTest {
 
     @Test
     fun test_toInitials() {
-        print(Date().humanizeDiff(Date().add(7, TimeUnits.DAY)))
+        print("Лох был " + Date().add(7, TimeUnits.DAY).humanizeDiff())
     }
 }

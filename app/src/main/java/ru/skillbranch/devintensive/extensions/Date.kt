@@ -27,15 +27,16 @@ fun Date.add(value: Int, units: TimeUnits = TimeUnits.SECOND) : Date {
 }
 
 fun Date.humanizeDiff(date: Date = Date()): String {
-     return when(date) {
-        Date().add(-2, TimeUnits.HOUR) -> "2 часа назад"
-        Date().add(-5, TimeUnits.DAY) -> "5 дней назад"
-        Date().add(2, TimeUnits.MINUTE) -> "через 2 минуты"
-        Date().add(7, TimeUnits.DAY) -> "через 7 дней"
-        Date().add(-400, TimeUnits.DAY) -> "более года назад"
-        Date().add(400, TimeUnits.DAY) -> "более чем через год"
-        else -> "в текущий момент времени"
-    }
+
+        return when(date) {
+            Date().add(-2, TimeUnits.HOUR) -> "2 часа назад"
+            Date().add(-5, TimeUnits.DAY) -> "5 дней назад"
+            Date().add(2, TimeUnits.MINUTE) -> "через 2 минуты"
+            Date().add(7, TimeUnits.DAY) -> "через 7 дней"
+            Date().add(-400, TimeUnits.DAY) -> "более года назад"
+            Date().add(400, TimeUnits.DAY) -> "более чем через год"
+            else -> "в текущий момент времени"
+        }
 }
 
 enum class TimeUnits {
